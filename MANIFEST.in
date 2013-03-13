@@ -1,0 +1,2 @@
+recursive-include angularclient/templates *
+recursive-include angularclient/static *
