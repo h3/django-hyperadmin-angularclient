@@ -2,7 +2,7 @@
 Introduction
 ============
 
-django-hyperadmin-angularclient is a hyper admin client powered by emberjs.
+django-hyperadmin-angularclient is a hyper admin client powered by angularjs.
 
 --------
 Features
