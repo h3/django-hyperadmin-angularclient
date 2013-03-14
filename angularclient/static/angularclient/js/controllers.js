@@ -2,26 +2,13 @@ function DashboardCtrl($scope) {
 
 }
 
-function UserListCtrl($scope) {
-    $scope.phones = [
-    {"name": "Nexus S",
-        "snippet": "Fast just got faster with Nexus S.",
-        "age": 0},
-    {"name": "Motorola XOOM™ with Wi-Fi",
-        "snippet": "The Next, Next Generation tablet.",
-        "age": 1},
-    {"name": "MOTOROLA XOOM™",
-        "snippet": "The Next, Next Generation tablet.",
-        "age": 2}
-    ];
-}
-
-function UserListCtrl($scope, User) {
-    $scope.phones = User.query();
+function UserListCtrl($scope, Users) {
+    console.log(Users.query());
+    $scope.phones = Users.query();
     $scope.orderProp = 'first_name';
 }
 
-//UserListCtrl.$inject = ['$scope', 'User'];
+UserListCtrl.$inject = ['$scope', 'Users'];
 
 function UserDetailCtrl($scope, $routeParams, User) {
     $scope.phone = User.get({phoneId: $routeParams.phoneId}, function(phone) {
@@ -31,4 +18,4 @@ function UserDetailCtrl($scope, $routeParams, User) {
     $scope.setImage = function(imageUrl) {
         $scope.mainImageUrl = imageUrl;
     }
-}
+}'users'

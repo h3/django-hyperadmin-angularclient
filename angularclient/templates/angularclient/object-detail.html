@@ -1,0 +1,7 @@
+{% load hyperadmin_utils %}
+
+{% raw %}
+<span ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+{{phone.0}}
+</span>
+{% endraw %}

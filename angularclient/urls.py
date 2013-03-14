@@ -9,5 +9,6 @@ admin_client = AngularJSClient(api_endpoint=hyperadmin.site)
 
 urlpatterns = patterns('',
     url(r'^tpl/dashboard.html$', DashboardView.as_view(), name='angularclient-dashboard'),
+    url(r'^tpl/object-detail.html$', DashboardView.as_view(), name='angularclient-object-detail'),
     url(r'^', include(admin_client.urls)),
 )
