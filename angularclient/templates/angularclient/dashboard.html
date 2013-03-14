@@ -1,0 +1,10 @@
+{% load hyperadmin_utils %}
+
+{% raw %}
+<ul class="phones">
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+    {{phone.name}}
+    <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+{% endraw %}

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" ng-app="angularclient">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Admin</title>
+        <link rel="stylesheet" href="css/app.css">
+        <script src="{{ STATIC_URL }}angularclient/js/angular.min.js"></script>
+        <script src="{{ STATIC_URL }}angularclient/js/app.js"></script>
+        <script src="{{ STATIC_URL }}angularclient/js/controllers.js"></script>
+    </head>
+    <body data-api-endpoint="{{ api_endpoint }}" ng-controller="PhoneListCtrl">
+        {% csrf_token %}
+        <div ng-view></div>
+    </body>
+</html>
