@@ -1,7 +1,7 @@
-angular.module('angularclient', []).
-config(['$routeProvider', function($routeProvider) {
-    $routeProvider.
-    when('/dashboard', {templateUrl: '/adm/tpl/dashboard.html',   controller: PhoneListCtrl}).
-    //when('/phones/:phoneId', {templateUrl: 'partials/phone-detail.html', controller: PhoneDetailCtrl}).
-    otherwise({redirectTo: '/dashboard'});
-}]);
+angular.module('angularclient', ['userServices']).
+    config(['$routeProvider', function($routeProvider) {
+        $routeProvider.
+            when('/dashboard', {templateUrl: '/adm/tpl/dashboard.html',   controller: UserListCtrl}).
+                when('/users/:userId', {templateUrl: 'partials/phone-detail.html', controller: UserDetailCtrl}).
+                otherwise({redirectTo: '/dashboard'});
+    }]);

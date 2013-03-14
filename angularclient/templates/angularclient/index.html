@@ -4,11 +4,13 @@
         <meta charset="utf-8">
         <title>Angular Admin</title>
         <link rel="stylesheet" href="css/app.css">
-        <script src="{{ STATIC_URL }}angularclient/js/angular.min.js"></script>
+        <script src="{{ STATIC_URL }}angularclient/angular/angular.min.js"></script>
+        <script src="{{ STATIC_URL }}angularclient/angular/ngResource/resource.js"></script>
         <script src="{{ STATIC_URL }}angularclient/js/app.js"></script>
         <script src="{{ STATIC_URL }}angularclient/js/controllers.js"></script>
+        <script src="{{ STATIC_URL }}angularclient/js/services.js"></script>
     </head>
-    <body data-api-endpoint="{{ api_endpoint }}" ng-controller="PhoneListCtrl">
+    <body data-api-endpoint="{{ api_endpoint }}" ng-controller="UserListCtrl">
         {% csrf_token %}
         <div ng-view></div>
     </body>
