@@ -11,5 +11,5 @@ from django.views.generic import TemplateView
 class DashboardView(TemplateView):
     template_name = 'angularclient/dashboard.html'
 
-class DashboardView(TemplateView):
+class ObjectView(TemplateView):
     template_name = 'angularclient/object-detail.html'

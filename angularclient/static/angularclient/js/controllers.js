@@ -5,7 +5,7 @@ function DashboardCtrl($scope, Dashboard) {
     $scope.resources = Dashboard.query()
 }
 
-UserListCtrl.$inject = ['$scope', 'Dashboard'];
+DashboardCtrl.$inject = ['$scope', 'Dashboard'];
 
 
 

@@ -1,8 +1,4 @@
 {% load hyperadmin_utils %}
 {% raw %}
-<ul>
-    <li ng-repeat="rs in resources | orderBy: '+app_name'">
-        <a href="#/{{rs.resource_class}}">{{rs.app_name}}.{{rs.resource_name}}</a>
-    </li>
-</ul>
+{{phone}}
 {% endraw %}

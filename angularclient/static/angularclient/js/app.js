@@ -1,3 +1,9 @@
+Resources = {};
+
+Resources.resourcelisting = function() {};
+Resources.crudresource = function() {};
+
+
 angular.module('angularclient', ['userServices']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.
