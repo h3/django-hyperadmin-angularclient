@@ -1,6 +1,13 @@
-function DashboardCtrl($scope) {
+'use strict';
 
+function DashboardCtrl($scope, Dashboard) {
+    var state = Dashboard.query()
+    $scope.resources = Dashboard.query()
 }
+
+UserListCtrl.$inject = ['$scope', 'Dashboard'];
+
+
 
 function UserListCtrl($scope, Users) {
     console.log(Users.query());
@@ -18,4 +25,6 @@ function UserDetailCtrl($scope, $routeParams, User) {
     $scope.setImage = function(imageUrl) {
         $scope.mainImageUrl = imageUrl;
     }
-}'users'
+}
+
+UserDetailCtrl.$inject = ['$scope', '$routeParams', 'User'];

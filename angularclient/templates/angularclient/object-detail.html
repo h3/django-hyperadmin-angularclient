@@ -1,7 +1,8 @@
 {% load hyperadmin_utils %}
-
 {% raw %}
-<span ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-{{phone.0}}
-</span>
+<ul>
+    <li ng-repeat="rs in resources | orderBy: '+app_name'">
+        <a href="#/{{rs.resource_class}}">{{rs.app_name}}.{{rs.resource_name}}</a>
+    </li>
+</ul>
 {% endraw %}
