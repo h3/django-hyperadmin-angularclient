@@ -1,9 +1,31 @@
 {% load hyperadmin_utils %}
 
 {% raw %}
-<ul>
-    <li ng-repeat="item in resource.collection.items | orderBy: '+prompt'">
-        <a href="{{item | getAbsoluteUrl}}">{{item.prompt}}</a>
-    </li>
-</ul>
+                <a href="{{item | getAbsoluteUrl}}">{{item.prompt}}</a>
+<div class="row">
+    <div class="small-12 large-12">
+        <table style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Prompt</th>
+                    <th>Angular URL</th>
+                    <th>API URL</th>
+                    <th>Links</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in resource.collection.items | orderBy: '+prompt'">
+                    <td>
+                        <a href="{{item | getAbsoluteUrl}}">
+                            {{item.prompt }}
+                        </a>
+                    </td>
+                    <td>{{item | getAbsoluteUrl}}</td>
+                    <td>{{item.href}}</td>
+                    <td>{{item.links}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endraw %}

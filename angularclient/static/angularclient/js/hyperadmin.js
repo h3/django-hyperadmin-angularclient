@@ -13,11 +13,17 @@ var getItemDataDict = function(item) {
 angular.module('hyperadmin', []).
     filter('getAbsoluteUrl', function () {
         return function (item) {
-            var data = getItemDataDict(item);
-            return '#/' + [
-                    data.resource_class.value, 
-                    data.app_name.value, 
-                    data.resource_name.value].join('/') + '/';
+            if (item) {
+                console.log(item)
+                var data = getItemDataDict(item);
+                return '#/' + [
+                        data.resource_class.value, 
+                        data.app_name.value, 
+                        data.resource_name.value].join('/') + '/';
+            }
+            else {
+                return '';
+            }
         };
     });
 

@@ -16,5 +16,9 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: '/adm/tpl/object-detail.html', 
             controller: CRUDResourceCtrl
         }).
+        when('/resourcelisting/:app/:resource/', {
+            templateUrl: '/adm/tpl/object-list.html', 
+            controller: ResourceListingCtrl
+        }).
         otherwise({redirectTo: '/'});
 }]);

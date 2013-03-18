@@ -1,13 +1,21 @@
 {% load hyperadmin_utils %}
 {% raw %}
-<table>
-    <tr>
-        <th ng-repeat="field in resource.collection.display_fields">
-            {{ field.prompt }}
-        </th>
-    </tr>
-    <tr ng-repeat="item in resource.collection.items">
-        <td ng-repeat="field in item.data">{{ field.value }}</td>
-    </tr>
-</table>
+<div class="row">
+    <div class="small-12 large-12">
+        <table style="width:100%;">
+            <thead>
+                <tr>
+                    <th ng-repeat="field in resource.collection.display_fields">
+                        {{ field.prompt }}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in resource.collection.items">
+                    <td ng-repeat="field in item.data">{{ field.value }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endraw %}
