@@ -1,4 +1,13 @@
 {% load hyperadmin_utils %}
 {% raw %}
-{{object_list}}
+<table>
+    <tr>
+        <th ng-repeat="field in resource.collection.display_fields">
+            {{ field.prompt }}
+        </th>
+    </tr>
+    <tr ng-repeat="item in resource.collection.items">
+        <td ng-repeat="field in item.data">{{ field.value }}</td>
+    </tr>
+</table>
 {% endraw %}

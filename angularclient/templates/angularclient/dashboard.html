@@ -2,16 +2,8 @@
 
 {% raw %}
 <ul>
-    <li ng-repeat="item in resources.collection.items | orderBy: '+prompt'">
-        <a href="{{item.href}}">{{item.prompt}}</a>
+    <li ng-repeat="item in resource.collection.items | orderBy: '+prompt'">
+        <a href="{{item | getAbsoluteUrl}}">{{item.prompt}}</a>
     </li>
 </ul>
 {% endraw %}
-
-{% comment %}
-        <ul>
-            <li ng-repeat="subitem in item.date | orderBy: '+prompt'">
-            <a href="{{}}"></a>
-            </li>
-        </ul>
-{% endcomment %}
