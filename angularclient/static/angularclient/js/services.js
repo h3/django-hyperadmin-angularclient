@@ -1,7 +1,8 @@
 'use strict';
 
 var url = function(i) {
-    return i +'?_HTTP_ACCEPT=application/vnd.Collection.hyperadmin.angularclient+JSON';
+    var ct = encodeURIComponent('application/vnd.Collection.hyperadmin.angularclient+JSON');
+    return [i, '?_HTTP_ACCEPT=', ct].join('');
 };
 
 angular.module('userServices', ['ngResource']).
